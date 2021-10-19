@@ -52,7 +52,7 @@ suite('getProtocol', () => {
 
     await assert
       .that(async () => {
-        await getProtocol(consul, {});
+        await getProtocol(consul, 'x');
       })
       .is.throwingAsync('foo');
     restore();
@@ -61,7 +61,7 @@ suite('getProtocol', () => {
   suite("with TLS_UNPROTECTED set to 'none'", () => {
     test("returns 'https'.", async () => {
       const restore = nodeenv('TLS_UNPROTECTED', 'none');
-      const protocol = await getProtocol(consul, { name: 'foo.node.dc1.consul' });
+      const protocol = await getProtocol(consul, 'foo.node.dc1.consul');
 
       assert.that(protocol).is.equalTo('https');
       restore();
@@ -71,7 +71,7 @@ suite('getProtocol', () => {
   suite("with TLS_UNPROTECTED set to 'world'", () => {
     test("returns 'http'.", async () => {
       const restore = nodeenv('TLS_UNPROTECTED', 'world');
-      const protocol = await getProtocol(consul, { name: 'foo.node.dc1.consul' });
+      const protocol = await getProtocol(consul, 'foo.node.dc1.consul');
 
       assert.that(protocol).is.equalTo('http');
       restore();
@@ -81,7 +81,7 @@ suite('getProtocol', () => {
   suite("with TLS_UNPROTECTED set to 'loopback'", () => {
     test("returns 'http' if target is the same host.", async () => {
       const restore = nodeenv('TLS_UNPROTECTED', 'loopback');
-      const protocol = await getProtocol(consul, { name: 'foo.node.dc1.consul' });
+      const protocol = await getProtocol(consul, 'foo.node.dc1.consul');
 
       assert.that(protocol).is.equalTo('http');
       restore();
@@ -89,7 +89,7 @@ suite('getProtocol', () => {
 
     test("returns 'https' if target is another host.", async () => {
       const restore = nodeenv('TLS_UNPROTECTED', 'loopback');
-      const protocol = await getProtocol(consul, { name: 'other-host.node.dc1.consul' });
+      const protocol = await getProtocol(consul, 'other-host.node.dc1.consul');
 
       assert.that(protocol).is.equalTo('https');
       restore();
@@ -102,7 +102,7 @@ suite('getProtocol', () => {
 
       await assert
         .that(async () => {
-          await getProtocol(consul, { name: 'foo.node.dc1.consul' });
+          await getProtocol(consul, 'foo.node.dc1.consul');
         })
         .is.throwingAsync('TLS_UNPROTECTED invalid.');
 
