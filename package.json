@@ -1,0 +1,44 @@
+{
+  "name": "@sealsystems/service-protocol",
+  "version": "0.0.0",
+  "description": "Determine protocol for connecting to service",
+  "author": {
+    "name": "SEAL Systems AG",
+    "email": "support@sealsystems.de",
+    "url": "http://www.sealsystems.de"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sealsystems/node-service-protocol"
+  },
+  "main": "lib",
+  "scripts": {
+    "bot": "bot",
+    "licenses": "license-checker --production --csv",
+    "lint": "lint",
+    "lint:fix": "lint-fix",
+    "release": "release",
+    "test": "test-run",
+    "test:coverage": "test-coverage",
+    "test:coverage:check": "test-coverage-check",
+    "test:report": "test-report"
+  },
+  "release": {
+    "extends": "@sealsystems/semantic-release/node-module"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
+  },
+  "dependencies": {
+    "getenv": "1.0.0"
+  },
+  "devDependencies": {
+    "@sealsystems/eslint-config-es": "3.6.8",
+    "@sealsystems/mocha": "4.1.11",
+    "@sealsystems/semantic-release": "4.3.7",
+    "nodeenv": "3.0.71",
+    "proxyquire": "2.1.3"
+  }
+}
