@@ -1,6 +1,6 @@
 {
   "name": "@sealsystems/service-protocol",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Determine protocol for connecting to service",
   "author": {
     "name": "SEAL Systems AG",
