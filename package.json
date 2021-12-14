@@ -28,16 +28,14 @@
     "extends": "@sealsystems/semantic-release/node-module"
   },
   "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.pkg.github.com"
+    "access": "public"
   },
   "dependencies": {
     "getenv": "1.0.0"
   },
   "devDependencies": {
-    "@sealsystems/eslint-config-es": "3.6.8",
+    "@sealsystems/eslint-config-es": "3.7.0",
     "@sealsystems/mocha": "4.1.11",
-    "@sealsystems/semantic-release": "4.3.7",
     "nodeenv": "3.0.71",
     "proxyquire": "2.1.3"
   }
