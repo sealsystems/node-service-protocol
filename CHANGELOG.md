@@ -1,3 +1,10 @@
+## 2.0.2 (2024-01-09)
+
+### Chores
+
+
+Trigger release ([61f12d4](https://github.com/sealsystems/node-service-protocol/commit/61f12d4))
+
 ## 2.0.1 (2024-01-09)
 
 ### Bug Fixes
