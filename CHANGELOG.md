@@ -1,3 +1,10 @@
+## 2.0.1 (2024-01-09)
+
+### Bug Fixes
+
+
+updated deps ([a9d6606](https://github.com/sealsystems/node-service-protocol/commit/a9d6606))
+
 ## 2.0.0 (2021-10-19)
 
 ### Features
