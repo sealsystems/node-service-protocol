@@ -1,3 +1,10 @@
+## 2.1.0 (2024-03-26)
+
+### Features
+
+
+Updated deps and build config ([6e6c68b](https://github.com/sealsystems/node-service-protocol/commit/6e6c68b))
+
 ## 2.0.2 (2024-01-09)
 
 ### Chores
