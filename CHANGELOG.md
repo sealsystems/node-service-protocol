@@ -1,3 +1,10 @@
+## 2.1.2 (2025-08-04)
+
+### Chores
+
+
+Trigger release ([5ab9ade](https://github.com/sealsystems/node-service-protocol/commit/5ab9ade))
+
 ## 2.1.1 (2025-08-04)
 
 ### Bug Fixes
